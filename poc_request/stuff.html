@@ -1,0 +1,294 @@
+from base.html
+<div class="form-row field-insight_quote">
+                <div>
+                        <label class="required" for="id_insight_quote">Insight quote:</label>   
+                            <input class="vIntegerField" id="id_insight_quote" name="insight_quote" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-customer_name">
+                <div>
+                        <label class="required" for="id_customer_name">Customer name:</label>
+                            <input class="vTextField" id="id_customer_name" maxlength="120" name="customer_name" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-country">
+                <div>
+                        <label class="required" for="id_country">Country:</label>   
+                            <input class="vTextField" id="id_country" maxlength="35" name="country" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-deal_value">
+                <div>
+                        <label class="required" for="id_deal_value">Deal value:</label>   
+                            <input class="vIntegerField" id="id_deal_value" name="deal_value" type="text">
+                </div>    
+        </div>
+
+        <div class="form-row field-poc_request_date">
+                <div>
+                        <label class="required" for="id_poc_request_date">Poc request date:</label>   
+                            <input class="vDateField" id="id_poc_request_date" name="poc_request_date" size="10" type="text">
+                            <span class="datetimeshortcuts">&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(0, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink0" href="javascript:DateTimeShortcuts.openCalendar(0);"><span title="Choose a Date" class="date-icon"></span></a></span>
+                    
+                <br>
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-account_manager_name">           
+                <div>                    
+                        <label class="required" for="id_account_manager_name">Account manager name:</label>        
+                            <input class="vTextField" id="id_account_manager_name" maxlength="35" name="account_manager_name" type="text">   
+                </div>            
+        </div>
+
+        <div class="form-row field-account_manager_email">    
+                <div>
+                        <label class="required" for="id_account_manager_email">Account manager email:</label>   
+                            <input class="vTextField" id="id_account_manager_email" maxlength="254" name="account_manager_email" type="email">
+                </div>
+        </div>
+    
+        <div class="form-row field-acccount_manager_number">
+                <div>
+                        <label class="required" for="id_acccount_manager_number">Acccount manager number:</label>   
+                            <input class="vTextField" id="id_acccount_manager_number" maxlength="12" name="acccount_manager_number" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-approval_manager_name">
+                <div>                    
+                        <label class="required" for="id_approval_manager_name">Approval manager name:</label>   
+                            <input class="vTextField" id="id_approval_manager_name" maxlength="35" name="approval_manager_name" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-presales_name">
+                <div>
+                        <label class="required" for="id_presales_name">Presales name:</label>   
+                            <input class="vTextField" id="id_presales_name" maxlength="35" name="presales_name" type="text">
+                </div>
+            
+        </div>
+
+        <div class="form-row field-presales_email">
+                <div>            
+                        <label class="required" for="id_presales_email">Presales email:</label>   
+                            <input class="vTextField" id="id_presales_email" maxlength="254" name="presales_email" type="email">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_start_date">
+                <div>
+                        <label class="required" for="id_poc_start_date">Poc start date:</label>   
+                            <input class="vDateField" id="id_poc_start_date" name="poc_start_date" size="10" type="text"><span class="datetimeshortcuts">&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(1, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink1" href="javascript:DateTimeShortcuts.openCalendar(1);"><span title="Choose a Date" class="date-icon"></span></a></span>
+                <br><span class="timezonewarning"></span></div>
+        </div>
+    
+        <div class="form-row field-poc_duration">
+                <div>
+                        <label class="required" for="id_poc_duration">Poc duration:</label>   
+                            <input id="id_poc_duration" name="poc_duration" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_location">
+                <div>
+                        <label class="required" for="id_poc_location">Poc location:</label>   
+                            <input class="vTextField" id="id_poc_location" maxlength="35" name="poc_location" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_description">
+                <div>
+                        <label class="required" for="id_poc_description">Poc description:</label>   
+                            <textarea class="vLargeTextField" cols="40" id="id_poc_description" name="poc_description" rows="10"></textarea>
+                </div>
+        </div>
+
+
+
+
+<span class="datetimeshortcuts">&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(0, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink0" href="javascript:DateTimeShortcuts.openCalendar(0);"><span title="Choose a Date" class="date-icon"></span></a></span>
+
+
+
+
+from home.html
+        {% block content %}
+<div class="row">
+  <div class="col-md-6">
+        <form method='POST' action=''>{% csrf_token %}
+
+        {{ form|crispy}}
+        <input class='btn btn-primary' type='submit' value='Submit'>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+        <div class="form-row field-insight_quote">
+                <div>
+                        <label class="required" for="id_insight_quote">Insight quote:</label>   
+                            <input class="vIntegerField" id="id_insight_quote" name="insight_quote" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-customer_name">
+                <div>
+                        <label class="required" for="id_customer_name">Customer name:</label>
+                            <input class="vTextField" id="id_customer_name" maxlength="120" name="customer_name" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-country">
+                <div>
+                        <label class="required" for="id_country">Country:</label>   
+                            <input class="vTextField" id="id_country" maxlength="35" name="country" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-deal_value">
+                <div>
+                        <label class="required" for="id_deal_value">Deal value:</label>   
+                            <input class="vIntegerField" id="id_deal_value" name="deal_value" type="text">
+                </div>    
+        </div>
+
+        <div class="form-row field-poc_request_date">
+                <div>
+                        <label class="required" for="id_poc_request_date">Poc request date:</label>   
+                            <input class="vDateField" id="id_poc_request_date" name="poc_request_date" size="10" type="text">
+                            <span class="datetimeshortcuts">&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(0, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink0" href="javascript:DateTimeShortcuts.openCalendar(0);"><span title="Choose a Date" class="date-icon"></span></a></span>
+                    
+                <br></div>
+        </div>
+    
+        <div class="form-row field-account_manager_name">           
+                <div>                    
+                        <label class="required" for="id_account_manager_name">Account manager name:</label>        
+                            <input class="vTextField" id="id_account_manager_name" maxlength="35" name="account_manager_name" type="text">   
+                </div>            
+        </div>
+
+        <div class="form-row field-account_manager_email">    
+                <div>
+                        <label class="required" for="id_account_manager_email">Account manager email:</label>   
+                            <input class="vTextField" id="id_account_manager_email" maxlength="254" name="account_manager_email" type="email">
+                </div>
+        </div>
+    
+        <div class="form-row field-acccount_manager_number">
+                <div>
+                        <label class="required" for="id_acccount_manager_number">Acccount manager number:</label>   
+                            <input class="vTextField" id="id_acccount_manager_number" maxlength="12" name="acccount_manager_number" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-approval_manager_name">
+                <div>                    
+                        <label class="required" for="id_approval_manager_name">Approval manager name:</label>   
+                            <input class="vTextField" id="id_approval_manager_name" maxlength="35" name="approval_manager_name" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-presales_name">
+                <div>
+                        <label class="required" for="id_presales_name">Presales name:</label>   
+                            <input class="vTextField" id="id_presales_name" maxlength="35" name="presales_name" type="text">
+                </div>
+        </div>
+
+        <div class="form-row field-presales_email">
+                <div>            
+                        <label class="required" for="id_presales_email">Presales email:</label>   
+                            <input class="vTextField" id="id_presales_email" maxlength="254" name="presales_email" type="email">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_start_date">
+                <div>
+                        <label class="required" for="id_poc_start_date">Poc start date:</label>   
+                            <input class="vDateField" id="id_poc_start_date" name="poc_start_date" size="10" type="text"><span class="datetimeshortcuts">&nbsp;<a href="javascript:DateTimeShortcuts.handleCalendarQuickLink(1, 0);">Today</a>&nbsp;|&nbsp;<a id="calendarlink1" href="javascript:DateTimeShortcuts.openCalendar(1);"><span title="Choose a Date" class="date-icon"></span></a></span>
+                <br></div>
+        </div>
+    
+        <div class="form-row field-poc_duration">
+                <div>
+                        <label class="required" for="id_poc_duration">Poc duration:</label>   
+                            <input id="id_poc_duration" name="poc_duration" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_location">
+                <div>
+                        <label class="required" for="id_poc_location">Poc location:</label>   
+                            <input class="vTextField" id="id_poc_location" maxlength="35" name="poc_location" type="text">
+                </div>
+        </div>
+    
+        <div class="form-row field-poc_description">
+                <div>
+                        <label class="required" for="id_poc_description">Poc description:</label>   
+                            <textarea class="vLargeTextField" cols="40" id="id_poc_description" name="poc_description" rows="10"></textarea>
+                </div>
+        </div>
+
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-error errornote">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-error errornote">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+
+    {% if form.errors %}
+        <div class="form-row field-insight_quote errors">
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <ul class="errorlist">
+                        <li>{{ error }}</li>
+                    </ul>
+                {% endfor %}
+            {% endfor %}
+                <div class="field-box field-box-insight_quote errors">
+                        <label class="required" for="id_insight_quote">Insight quote:</label>   
+                            <input class="vIntegerField" id="id_insight_quote" name="insight_quote" type="text">
+                </div>
+        </div>
+    {% else %}
+        <div class="form-row field-insight_quote">
+                <div>
+                        <label class="required" for="id_insight_quote">Insight quote:</label>   
+                            <input class="vIntegerField" id="id_insight_quote" name="insight_quote" type="text">
+                </div>
+        </div>
+    {% endif %}
+
+
+
+
+
+
+
+        To do:
+        Attachements

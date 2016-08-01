@@ -1,0 +1,60 @@
+{% load staticfiles %}
+{% load i18n admin_urls admin_static admin_modify %}
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Center of Excellence</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css">
+
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+
+<body class=" app-poc_request model-poc_request change-form" data-admin-utc-offset="0">
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">        
+<h1 id="site-name"><a href="/">Center of Excellence POC Request</a></h1>
+        </div>        
+        <div id="user-tools">            
+      
+        </div>                        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/">Home</a>
+
+</div>
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>{{title}}</h1>
+        <br>
+        <h3>You may now close this windows</h3>
+        <div id="content-main">
+
+<form enctype="multipart/form-data" action="" method="post" id="poc_request_form" novalidate="">{% csrf_token %}
+<div>
+  <fieldset class="module aligned ">     
+
+</fieldset>
+
+</div>
+</form></div>
+    </div>
+    <!-- END Content -->
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+
+
